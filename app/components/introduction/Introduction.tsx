@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
 import Rectangle from "@/public/shapes/shaperectangle.png"
 import Circle from "@/public/shapes/shapecircle.png"
@@ -7,9 +8,31 @@ import Polygon from "@/public/shapes/shapepolygon.png"
 
 const Introduction = () => {
 
+  const [sectionHeight, setSectionHeight] = useState('36rem'); 
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Calculate and set the height dynamically
+      const height = window.innerHeight * 1; // Example formula: 80% of the viewport height
+      setSectionHeight(`${height}px`);
+    };
+
+    // Set the initial height
+    handleResize();
+
+    // Adjust the height on window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
   return (
-    <div className="h-[90vh] w-full dark:bg-[#1A1C1B] bg-[#1A1C1B] dark:bg-grid-[#1A1C1B]/[0.2] 
-        bg-grid-white/[0.2] flex items-center justify-center relative">
+    <div className="w-full dark:bg-[#1A1C1B] bg-[#1A1C1B] dark:bg-grid-[#1A1C1B]/[0.2] 
+        bg-grid-white/[0.2] flex items-center justify-center relative" style={{ height: sectionHeight }}        >
     <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#1A1C1B] 
      [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
       
