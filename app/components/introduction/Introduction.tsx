@@ -13,7 +13,7 @@ const Introduction = () => {
   useEffect(() => {
     const handleResize = () => {
       // Calculate and set the height dynamically
-      const height = window.innerHeight * 0.8; // Example formula: 80% of the viewport height
+      const height = window.innerHeight * 0.9; // Example formula: 80% of the viewport height
       setSectionHeight(`${height}px`);
     };
 
