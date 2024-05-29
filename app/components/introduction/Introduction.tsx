@@ -6,8 +6,9 @@ import Polygon from "@/public/shapes/shapepolygon.png"
 
 
 const Introduction = () => {
+
   return (
-    <div className="h-[36rem] w-full dark:bg-[#1A1C1B] bg-[#1A1C1B] dark:bg-grid-[#1A1C1B]/[0.2] 
+    <div className="h-[100vh] w-full dark:bg-[#1A1C1B] bg-[#1A1C1B] dark:bg-grid-[#1A1C1B]/[0.2] 
         bg-grid-white/[0.2] flex items-center justify-center relative">
     <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#1A1C1B] 
      [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
