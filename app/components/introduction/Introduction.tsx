@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Rectangle from "@/public/shapes/shaperectangle.png"
 import Circle from "@/public/shapes/shapecircle.png"
 import Polygon from "@/public/shapes/shapepolygon.png"
-
+import Link from 'next/link';
 
 const Introduction = () => {
 
@@ -42,9 +42,9 @@ const Introduction = () => {
          I am a passionate computer science student with a strong focus on web development particularly in front-end technologies. Coding is not just a skill but a love I actively pursue daily. Since Feb 2023, I have been dedicated to web development, thriving in both solo and team projects.</p>
          </div>
 
-         <div className='text-[18px]'>
+         <div className='text-[16px]'>
             <button className='bg-[#DC5F00] w-[50%] py-4'>contact/{'>'}</button>
-            <button className='bg-[#777676] w-[50%] py-4'>github/{'>'}</button>
+            <button className='bg-[#777676] w-[50%] py-4'><Link href={'https://github.com/faizanalibaig'} target='_blank' >github/{'>'}</Link></button>
          </div>   
 
        </section>
