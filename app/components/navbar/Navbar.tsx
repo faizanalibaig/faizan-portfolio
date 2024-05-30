@@ -42,13 +42,13 @@ const Navbar= () => {
        menu && 
        <div className='bg-[#1A1C1B] border-b border-[#777676] h-[200px] w-full absolute z-20 top-0 px-5 py-8 flex flex-col justify-between'>
          <div className='flex items-center justify-between'>
-          <h1 className='text-[22px] font-medium'>faizanali./{'>'}</h1>
+          <h1 className='text-[20px] font-medium'>faizanali./{'>'}</h1>
           <LuPanelBottomClose className='text-[22px]' onClick={closeMenu}/>
          </div> 
          <section className='flex justify-between'>
           {menuoption.map((value)=>{
             return(
-              <p key={value.id} className='border-b text-[18px]'>{`${value.title} />`}</p>
+              <p key={value.id} className='border-b text-[16px]'>{`${value.title} />`}</p>
             )
           })}
          </section>
